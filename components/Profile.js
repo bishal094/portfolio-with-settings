@@ -3,8 +3,14 @@ import { Flex } from "@chakra-ui/layout"
 import { Box, Heading, Icon, Text } from "@chakra-ui/react"
 import { DiAngularSimple, DiReact, DiBootstrap } from "react-icons/di"
 import DevelopementLanguages from "./DevelopementLanguages"
+import { useEffect, useState } from "react"
 
 const Profile = () => {
+    const [mounted, setMounted] = useState(false)
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)")
     const languages = [
         {
@@ -24,7 +30,7 @@ const Profile = () => {
         }
     ]
     return (
-        <Flex direction={isNotSmallerScreen ? "row" : "column"} w="100%" justifyContent="flex-start">
+        <Flex direction={mounted && isNotSmallerScreen ? "row" : "column"} w="100%" justifyContent="flex-start">
             <Box alignSelf="center" px="32" py="16">
                 <Heading fontWeight="extrabold" color="cyan.500" size="4xl">
                     5+
@@ -33,7 +39,7 @@ const Profile = () => {
             </Box>
             <Box alignSelf="center" px="32" py="16">
                 <Text fontSize="2xl" fontWeight="bold">Frontend developer at Alpas technology</Text>
-                <Flex direction={isNotSmallerScreen ? "row" : "column"} mt={8}>
+                <Flex direction={mounted && isNotSmallerScreen ? "row" : "column"} mt={8}>
 
                     {
                         languages.map(({ logo, bgColor, title }, i) => (
