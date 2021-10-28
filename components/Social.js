@@ -9,7 +9,7 @@ const Social = () => {
         <HStack justifyContent="space-between" wrap="wrap" minWidth="50vw">
             {
                 socialNetworks?.map((social, i) => (
-                    <a href={social.url} target="_blank" rel="noopener noreferrer">
+                    <a href={social.url} target="_blank" rel="noopener noreferrer" key={i}>
                         <Icon as={social.icon} boxSize="50" />
                     </a>
                 ))

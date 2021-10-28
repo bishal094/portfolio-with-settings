@@ -3,7 +3,7 @@ import { FaFacebookF, FaGoogle, FaShopify, FaSpotify } from "react-icons/fa"
 import { FaGithub, FaInstagram, FaLinkedin, FaGitlab } from "react-icons/fa"
 
 export const variables = {
-    pageHeader: "Portfolio",
+    pageHeader: "Bishal Shrestha",
     headerUrls: [
         {
             title: "instagram",
@@ -70,6 +70,14 @@ export const variables = {
                 bgColor: "purple.400"
             }
         ]
+    },
+    seo: {
+        title: "Bishal Shrestha",
+        description: "Frontend developer at Alpas Technology with experience in Angular, React, Bootstrap, ASP.net core, Next.jsAngular, React, Bootstrap, ASP.net core, Next.js",
+        image: "https://avatars.githubusercontent.com/u/48466664?s=400&u=a7ab7b84322362e99d2a76c6d144c8ae0db642ef&v=4",
+        siteName: "Portfolio: Bishal Shrestha",
+        url: "https://heuristic-hamilton-a7cda6.netlify.app/",
+
     }
 
 }
