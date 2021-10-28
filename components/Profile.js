@@ -30,7 +30,7 @@ const Profile = () => {
         }
     ]
     return (
-        <Flex direction={mounted && isNotSmallerScreen ? "row" : "column"} w="100%" justifyContent="flex-start">
+        <Flex direction={mounted && isNotSmallerScreen ? "row" : "column"} w="100%" justifyContent="center">
             <Box alignSelf="center" px="32" py="16">
                 <Heading fontWeight="extrabold" color="cyan.500" size="4xl">
                     5+
