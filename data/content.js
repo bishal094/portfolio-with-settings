@@ -32,7 +32,7 @@ export const variables = {
         smallText: "Angular, React, Bootstrap, ASP.net core, Next.jsAngular, React, Bootstrap, ASP.net core, Next.js",
         imgUrl: "https://avatars.githubusercontent.com/u/48466664?s=400&u=a7ab7b84322362e99d2a76c6d144c8ae0db642ef&v=4",
         btnText: "Hello",
-        btnUrl: "javascript:void()"
+        btnUrl: "#"
     },
     socialNetworks: [
         {

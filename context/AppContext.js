@@ -1,15 +1,11 @@
-import { useMediaQuery } from "@chakra-ui/react";
+import { useBreakpointValue } from "@chakra-ui/react";
 import { variables } from "data/content";
-import { createContext, useLayoutEffect, useState } from "react"
+import { createContext } from "react"
 
 export const AppContext = createContext();
 const AppContextProvider = ({ children }) => {
 
-    const [mediaQuery] = useMediaQuery("(min-width: 820px)")
-    const [isNotSmallerScreen, setIsNotSmallerScreen] = useState(false)
-    useLayoutEffect(() => {
-        setIsNotSmallerScreen(mediaQuery);
-    }, [mediaQuery])
+    const isNotSmallerScreen = useBreakpointValue({ md: true })
     const appContextVal = {
         ...variables,
         isNotSmallerScreen,
