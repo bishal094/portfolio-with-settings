@@ -14,6 +14,7 @@ const Meta = ({ title, description, image, siteName, url }) => {
                 <meta property="og:image" content={image} />
                 <meta property="og:url" content={url} />
                 <meta property="og:site_name" content={siteName} />
+                <meta name="google-site-verification" content="fVjYKjpHxxr3isJ5mr3Ak65yhdT06ZbIwcBF6zX1uZY" />
             </Head>
         </div>
     )
