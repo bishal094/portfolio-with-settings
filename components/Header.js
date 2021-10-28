@@ -1,9 +1,8 @@
-import { Box, Button, Circle, Flex, Image, Spacer, Stack, Text, useColorMode, useMediaQuery } from "@chakra-ui/react"
+import { Box, Button, Circle, Flex, Image, Stack, Text, useColorMode } from "@chakra-ui/react"
 import { AppContext } from "context/AppContext"
-import { useContext, useEffect, useState } from "react"
+import { useContext } from "react"
 
 const Header = () => {
-  const [mounted, setMounted] = useState(false)
   const { firstSection: {
     firstText,
     coloredText,
@@ -12,9 +11,6 @@ const Header = () => {
     btnText,
     btnUrl
   }, isNotSmallerScreen } = useContext(AppContext)
-  useEffect(() => {
-    setMounted(true)
-  }, [])
   const { colorMode } = useColorMode();
   const isDark = colorMode === "dark";
   return (

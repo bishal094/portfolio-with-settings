@@ -3,7 +3,7 @@ import { AppContext } from 'context/AppContext'
 import { useContext } from 'react'
 
 const DevelopementLanguages = ({ logo, bgColor, title, i }) => {
-    const { isNotSmallerScreen, mounted } = useContext(AppContext);
+    const { isNotSmallerScreen } = useContext(AppContext);
     return (
         <Flex
             rounded="xl"

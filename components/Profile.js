@@ -6,7 +6,6 @@ import { useContext } from "react"
 import { AppContext } from "context/AppContext"
 
 const Profile = () => {
-    const [mounted, setMounted] = useState(false)
     const {
         workExperience: {
             middleTitle,
@@ -14,10 +13,6 @@ const Profile = () => {
             smallText,
             areaOfExpertise,
         }, isNotSmallerScreen } = useContext(AppContext)
-
-    useEffect(() => {
-        setMounted(true)
-    }, [])
     return (
         <Flex direction={isNotSmallerScreen ? "row" : "column"} w="100%" justifyContent="space-between" w={isNotSmallerScreen ? "83vw" : "98vw"}>
             <Box alignSelf="center" px="32" py="16">
