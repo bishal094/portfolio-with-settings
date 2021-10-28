@@ -19,7 +19,7 @@ const Profile = () => {
         setMounted(true)
     }, [])
     return (
-        <Flex direction={mounted && isNotSmallerScreen ? "row" : "column"} w="100%" justifyContent="space-between" w={mounted && isNotSmallerScreen ? "83vw" : "98vw"}>
+        <Flex direction={isNotSmallerScreen ? "row" : "column"} w="100%" justifyContent="space-between" w={isNotSmallerScreen ? "83vw" : "98vw"}>
             <Box alignSelf="center" px="32" py="16">
                 <Heading fontWeight="extrabold" color="cyan.500" size="4xl">
                     {bigColoredText}
@@ -28,7 +28,7 @@ const Profile = () => {
             </Box>
             <Box alignSelf="center">
                 <Text fontSize="2xl" fontWeight="bold">{middleTitle}</Text>
-                <Flex direction={mounted && isNotSmallerScreen ? "row" : "column"} mt={8} alignItems="center">
+                <Flex direction={isNotSmallerScreen ? "row" : "column"} mt={8} alignItems="center">
 
                     {
                         areaOfExpertise?.map(({ logo, bgColor, title }, i) => (

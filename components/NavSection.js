@@ -8,7 +8,7 @@ const NavSection = () => {
     const isDark = colorMode === "dark";
     const { pageHeader, headerUrls, isNotSmallerScreen, mounted } = useContext(AppContext)
     return (
-        <Flex w="100%" flexDirection={mounted && isNotSmallerScreen ? "row" : "column"} alignItems={mounted && !isNotSmallerScreen && "center"} py="3">
+        <Flex w="100%" flexDirection={isNotSmallerScreen ? "row" : "column"} alignItems={!isNotSmallerScreen && "center"} py="3">
             <Heading ml="8" size="md" fontWeight="semibold" color="cyan.600">
 
                 {pageHeader}
@@ -19,12 +19,12 @@ const NavSection = () => {
                     headerUrls?.map((url, i) => (
 
                         <a href={url.url} target="_blank" key={i}>
-                            <IconButton ml={8} icon={<url.icon />} isRound="true" mt={mounted && !isNotSmallerScreen && "3"}></IconButton>
+                            <IconButton ml={8} icon={<url.icon />} isRound="true" mt={!isNotSmallerScreen && "3"}></IconButton>
                         </a>
                     ))
                 }
             </Flex>
-            <IconButton ml={8} icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" onClick={toggleColorMode} mt={mounted && !isNotSmallerScreen && "3"}></IconButton>
+            <IconButton ml={8} icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" onClick={toggleColorMode} mt={!isNotSmallerScreen && "3"}></IconButton>
         </Flex>
     )
 }

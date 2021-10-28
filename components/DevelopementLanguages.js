@@ -13,7 +13,7 @@ const DevelopementLanguages = ({ logo, bgColor, title, i }) => {
             h="20em"
             w="20em"
             justify="flex-end"
-            ml={mounted && isNotSmallerScreen && i !== 0 ? 4 : 0}
+            ml={isNotSmallerScreen && i !== 0 ? 4 : 0}
             _hover={{ bg: bgColor.replace("4", "5") }}>
             <Icon color="white" p="4" as={logo} h="24" w="24" />
             <Text color="white" p="4" fontWeight="semibold">
