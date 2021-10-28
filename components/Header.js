@@ -19,14 +19,15 @@ const Header = () => {
   const isDark = colorMode === "dark";
   const [isNotSmallerScreen] = useMediaQuery("(min-width: 600px)")
   return (
-    <Stack w="100vw">
+    <Stack w={mounted && isNotSmallerScreen ? "83vw" : "98vw"}>
       <Circle position="absolute" bg="blue.100" opacity="0.1" w="300px" h="300px" alignSelf="flex-end" />
       <Flex direction={mounted && isNotSmallerScreen ? "row" : "column"}
         p={mounted && isNotSmallerScreen ? "32" : "3"}
         alignSelf="flex-start"
-        justifyContent="center"
+        justifyContent="space-between"
+        width="100%"
         spacing="100px">
-        <Box mt={mounted && isNotSmallerScreen ? "0" : "16"} alignSelf="flex-start" px="32" py="16">
+        <Box mt={mounted && isNotSmallerScreen ? "0" : "16"} alignSelf="flex-start">
           <Text fontSize="5xl" fontWeight="semibold">{firstText}</Text>
           <Text fontSize="7xl" fontWeight="bold" bgGradient="linear(to-r, cyan.400, blue.500, purple.600)" bgClip="text">{coloredText}</Text>
           <Text color={isDark ? "gray.200" : "gray.500"}>{smallText}</Text>
@@ -44,7 +45,6 @@ const Header = () => {
           boxShadow="lg"
           backgroundColor="transparent"
           borderRadius="full"
-          px="32" py="16"
         />
       </Flex>
     </Stack>
