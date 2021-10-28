@@ -45,6 +45,8 @@ const Header = () => {
           boxShadow="lg"
           backgroundColor="transparent"
           borderRadius="full"
+          height="300px"
+          width="300px"
         />
       </Flex>
     </Stack>
