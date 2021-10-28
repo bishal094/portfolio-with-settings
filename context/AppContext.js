@@ -5,12 +5,10 @@ import { createContext, useEffect, useState } from "react"
 export const AppContext = createContext();
 const AppContextProvider = ({ children }) => {
 
-    const mediaQuery = useMediaQuery("(min-width: 820px)")
+    const [mediaQuery] = useMediaQuery("(min-width: 820px)")
     const [isNotSmallerScreen, setIsNotSmallerScreen] = useState(false)
     useEffect(() => {
-        if (mediaQuery !== isNotSmallerScreen) {
-            setIsNotSmallerScreen(mediaQuery);
-        }
+        setIsNotSmallerScreen(mediaQuery);
     }, [mediaQuery])
     const appContextVal = {
         ...variables,

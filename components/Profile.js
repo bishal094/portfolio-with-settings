@@ -28,7 +28,7 @@ const Profile = () => {
             </Box>
             <Box alignSelf="center">
                 <Text fontSize="2xl" fontWeight="bold">{middleTitle}</Text>
-                <Flex direction={isNotSmallerScreen ? "row" : "column"} mt={8} alignItems="center">
+                <Flex direction={isNotSmallerScreen ? "row" : "column"} mt={8} alignItems="center" wrap="wrap">
 
                     {
                         areaOfExpertise?.map(({ logo, bgColor, title }, i) => (
