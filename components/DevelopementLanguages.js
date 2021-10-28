@@ -15,8 +15,8 @@ const DevelopementLanguages = ({ logo, bgColor, title, i }) => {
             direction="column"
             mt={4}
             bg={bgColor}
-            h="15em"
-            w="15em"
+            h="20em"
+            w="20em"
             justify="flex-end"
             ml={mounted && isNotSmallerScreen && i !== 0 ? 4 : 0}
             _hover={{ bg: bgColor.replace("4", "5") }}>

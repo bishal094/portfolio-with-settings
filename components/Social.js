@@ -1,13 +1,19 @@
 import { HStack } from "@chakra-ui/react"
 import { Icon } from "@chakra-ui/icon"
 import { FaFacebookF, FaGoogle, FaShopify, FaSpotify } from "react-icons/fa"
+import { useContext } from "react"
+import { AppContext } from "context/AppContext"
 const Social = () => {
+    const { socialNetworks } = useContext(AppContext)
     return (
-        <HStack spacing="24">
-            <Icon as={FaFacebookF} boxSize="50" />
-            <Icon as={FaGoogle} boxSize="50" />
-            <Icon as={FaSpotify} boxSize="50" />
-            <Icon as={FaShopify} boxSize="50" />
+        <HStack justifyContent="space-between" wrap="wrap" minWidth="50vw">
+            {
+                socialNetworks?.map((social, i) => (
+                    <a href={social.url} target="_blank" rel="noopener noreferrer">
+                        <Icon as={social.icon} boxSize="50" />
+                    </a>
+                ))
+            }
         </HStack>
     )
 }
