@@ -24,9 +24,9 @@ const Header = () => {
       <Flex direction={mounted && isNotSmallerScreen ? "row" : "column"}
         p={mounted && isNotSmallerScreen ? "32" : "3"}
         alignSelf="flex-start"
-        justifyContent="space-between"
+        justifyContent="center"
         spacing="100px">
-        <Box mt={mounted && isNotSmallerScreen ? "0" : "16"} alignSelf="flex-start">
+        <Box mt={mounted && isNotSmallerScreen ? "0" : "16"} alignSelf="flex-start" px="32" py="16">
           <Text fontSize="5xl" fontWeight="semibold">{firstText}</Text>
           <Text fontSize="7xl" fontWeight="bold" bgGradient="linear(to-r, cyan.400, blue.500, purple.600)" bgClip="text">{coloredText}</Text>
           <Text color={isDark ? "gray.200" : "gray.500"}>{smallText}</Text>
@@ -44,6 +44,7 @@ const Header = () => {
           boxShadow="lg"
           backgroundColor="transparent"
           borderRadius="full"
+          px="32" py="16"
         />
       </Flex>
     </Stack>
