@@ -1,14 +1,9 @@
 import { Flex, Icon, Text, useMediaQuery } from '@chakra-ui/react'
-
-import React, { useEffect, useState } from 'react'
+import { AppContext } from 'context/AppContext'
+import { useContext } from 'react'
 
 const DevelopementLanguages = ({ logo, bgColor, title, i }) => {
-    const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)")
-    const [mounted, setMounted] = useState(false)
-
-    useEffect(() => {
-        setMounted(true)
-    }, [])
+    const { isNotSmallerScreen, mounted } = useContext(AppContext);
     return (
         <Flex
             rounded="xl"

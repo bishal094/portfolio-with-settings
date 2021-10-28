@@ -6,22 +6,22 @@ export const variables = {
     pageHeader: "Bishal Shrestha",
     headerUrls: [
         {
-            title: "instagram",
+            title: "Instagram",
             icon: FaInstagram,
             url: "https://www.instagram.com/bishal09/"
         },
         {
-            title: "linkedin",
+            title: "Linkedin",
             icon: FaLinkedin,
             url: "https://www.linkedin.com/in/bishal-shrestha-894741224/"
         },
         {
-            title: "github",
+            title: "Github",
             icon: FaGithub,
             url: "https://github.com/bishal094"
         },
         {
-            title: "gitlab",
+            title: "Gitlab",
             icon: FaGitlab,
             url: "https://gitlab.com/bishalshrestha037"
         },

@@ -11,16 +11,15 @@ const Header = () => {
     imgUrl,
     btnText,
     btnUrl
-  } } = useContext(AppContext)
+  }, isNotSmallerScreen } = useContext(AppContext)
   useEffect(() => {
     setMounted(true)
   }, [])
   const { colorMode } = useColorMode();
   const isDark = colorMode === "dark";
-  const [isNotSmallerScreen] = useMediaQuery("(min-width: 600px)")
   return (
     <Stack w={mounted && isNotSmallerScreen ? "83vw" : "98vw"}>
-      <Circle position="absolute" bg="blue.100" opacity="0.1" w="300px" h="300px" alignSelf="flex-end" />
+      <Circle position="absolute" bg="blue.600" opacity="0.1" w="300px" h="300px" alignSelf="flex-end" />
       <Flex direction={mounted && isNotSmallerScreen ? "row" : "column"}
         p={mounted && isNotSmallerScreen ? "32" : "3"}
         alignSelf="flex-start"

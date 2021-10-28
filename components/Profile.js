@@ -1,7 +1,5 @@
-import { useMediaQuery } from "@chakra-ui/media-query"
 import { Flex } from "@chakra-ui/layout"
-import { Box, Heading, Icon, Text } from "@chakra-ui/react"
-import { DiAngularSimple, DiReact, DiBootstrap } from "react-icons/di"
+import { Box, Heading, Text } from "@chakra-ui/react"
 import DevelopementLanguages from "./DevelopementLanguages"
 import { useEffect, useState } from "react"
 import { useContext } from "react"
@@ -15,23 +13,22 @@ const Profile = () => {
             bigColoredText,
             smallText,
             areaOfExpertise,
-        } } = useContext(AppContext)
+        }, isNotSmallerScreen } = useContext(AppContext)
 
     useEffect(() => {
         setMounted(true)
     }, [])
-    const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)")
     return (
-        <Flex direction={mounted && isNotSmallerScreen ? "row" : "column"} w="100%" justifyContent="center">
+        <Flex direction={mounted && isNotSmallerScreen ? "row" : "column"} w="100%" justifyContent="space-between" w={mounted && isNotSmallerScreen ? "83vw" : "98vw"}>
             <Box alignSelf="center" px="32" py="16">
                 <Heading fontWeight="extrabold" color="cyan.500" size="4xl">
                     {bigColoredText}
                 </Heading>
                 <Text fontSize="2xl" color="gray.400">{smallText}</Text>
             </Box>
-            <Box alignSelf="center" px="32" py="16">
+            <Box alignSelf="center">
                 <Text fontSize="2xl" fontWeight="bold">{middleTitle}</Text>
-                <Flex direction={mounted && isNotSmallerScreen ? "row" : "column"} mt={8}>
+                <Flex direction={mounted && isNotSmallerScreen ? "row" : "column"} mt={8} alignItems="center">
 
                     {
                         areaOfExpertise?.map(({ logo, bgColor, title }, i) => (
